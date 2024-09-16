@@ -17,7 +17,7 @@ def search_planet(stars: Optional[int] = None, moons: Optional[int] = None,
                   distance: Optional[float] = None, gaia_magnitude: Optional[float] = None):
     
     # Adjusted tolerances for approximate search
-    orbital_period_tol = 200
+    orbital_period_tol = 110
     radius_tol = 1
     mass_tol = 2000
     solar_radius_tol = 2
