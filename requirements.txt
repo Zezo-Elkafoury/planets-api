@@ -31,3 +31,4 @@ pandas==2.0.0
 pandocfilters==1.5.0
 typing_extensions==4.12.2
 uvicorn==0.30.6
+numpy==1.26.4
