@@ -1,10 +1,16 @@
 from fastapi import FastAPI, Query
 from typing import Optional
 import pandas as pd
-
+from fastapi.middleware.cors import CORSMiddleware
 # Initialize FastAPI app
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins, you can specify your frontend's origin instead
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all HTTP methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allows all headers
+)
 # Load the dataset
 df = pd.read_csv('cleaned_planets.csv')
 
